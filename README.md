@@ -1,9 +1,13 @@
-# Trybe Exercises
+# Trybe Exercises Repository
 
-## This is my first repository, to archive all the exercises that i've made while i'm studying in Trybe's Journey. Now, for example, this is my first code in Mardown, and such it's great!
 
-** Rules of this repository **
+**This is my exercises repository, to archive all the exercises that I've made while I'm studying in Trybe's Journey.**
 
-I don't know, in this moment
+Here, have a folder structure based in Trybe's Learning Journey, wich each folder are corresponden to a specific module, showed below:
 
-[Know more about Trybe] (https://www.betrybe.com/)
+* Fundamentals of Web Development
+* Frontend Development
+* Backend Development
+* Computer Science Fundamentals
+
+If you want to know more about Trybe, visit here: <https://betrybe.com>
