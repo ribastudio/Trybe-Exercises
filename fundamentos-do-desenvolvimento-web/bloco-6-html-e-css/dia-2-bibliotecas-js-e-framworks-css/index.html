@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="validation.min.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Formulário de inscrição</title>
+</head>
+<body>
+  <div class="row valign-wrapper">
+    <div class="card-panel blue-text valign-wrapper">
+      <header class="container">
+        <h1 class="center-rigth">Cadastre-se agora mesmo</h1>
+      </header>
+      <main class="container">
+        <form action="" method="get" enctype="multipart/form-data" id="formy">
+          <div class="row">
+            <div class="col s12">
+              <label for="name-box">Nome
+                <input type="text" name="name-box" class="fields" id="name-box" placeholder="Digite seu nome" required autocomplete="on" autofocus></label>
+              </div>
+          </div>
+            <div class="row">
+              <div class="col s6">
+                <label for="email-box">email</label>
+                  <input type="email" class="fields" name="email-box" id="email-box" maxlength="50" placeholder="Digite seu email" required>
+              </div>
+              <div class="col s6">
+                <label for="cpf-field">CPF
+                <input type="text" class="fields" name="cpf-field" pattern="([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2})|([0-9]{2}\.?[0-9]{3}\.?[0-9]{3}/?[0-9]{4}-?[0-9]{2})" maxlength="11" id="cpf-text" placeholder="Digite somente os números do CPF" required></label>
+              </div>
+            </div>
+            <!-- pattern para cpf ou cnpj https://gist.github.com/marcoscastro/7887900ceebe9e223dce -->
+            <div class="row">
+              <div class="col s12">
+                <label for="end-field">Seu endereço
+                  <input type="text" class="fields" name="end-field" id="end-field" maxlength="200" placeholder="Digite seu endereço" required></label>
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <div class="col s6">
+                  <div class="input-field"><input type="text" name="city" maxlength="28" id="city-field" class="fields" placeholder="Digite sua cidade" required><label for="city">Cidade</label></div>
+                </div>
+                <div class="col s6">
+                  <label for="state">Estado</label>
+                  <select name="state" class="browser-default fields" id="state-opt" required>
+                      <option value="" disabled selected>Escolha seu estado</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+            <div class="col s4">
+              <p>
+                <label for="radio1">Tipo de Residência
+                  <input type="radio" class="fields" name="group1" id="radio1"><span>Apartamento</span>
+                </label>
+                  <label><input type="radio" class="fields" name="group1" id="radio2"><span>Casa</span></label>
+              </p>
+            </div>
+            <div class="row">
+              <div class='input-field col s12'>
+                <textarea class='materialize-textarea fields' name="resume-text" maxlength="1000" data-length="1000" cols="30" rows="10" id="resume-text-area"></textarea><label for="resume-text">Resumo do currículo</label>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col s6'>
+                <label for="position-job">Cargo</label>
+                <input type="text" class='input-field fields' name="position-job" maxlength="40" id="position-job">
+              </div>
+              <div class='col s6'>
+                <label for="description-job">Descrição do cargo</label>
+                  <input type="text" class='input-field fields' name="description-job" maxlength="500" id="description-job">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                <label for="initial-data">Data Inicial
+                  <input type="text" name="initial-data" class="fields" pattern="\d{1,2}/\d{1,2}/\d{4}" id="datepicker"></label>
+              </div>
+            </div>
+        </form>
+        <div id="receive-data">
+        </div>
+        <section class="row">
+          <button data-target="modal1" class='btn waves-effect waves-light btn-large purple lighten-1 btn modal-trigger' id="btnSubmit" type="submit"><i class="material-icons right">send</i>Clique aqui para enviar</button>
+          <button class='btn waves-effect waves-light btn-large blue darken-1' type="reset" id="btnClean"><i class="material-icons right" >clear</i>Limpar</button>
+        </section>
+      </main>
+    </div>
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4 id="listFormData">Seus dados aqui</h4>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Obrigado</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="pikaday.js"></script>
+  <script src="validation.min.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>
